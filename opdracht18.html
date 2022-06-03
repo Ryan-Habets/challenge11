@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <style>
+        #name {
+            border: 5px solid red;
+            text-align: center;
+        }
+        .button{
+            width: 500px;
+            height: 300px;
+            color: purple;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <button onclick="genereerNaam()" class="button">genereer een naam</button>
+    <h1 id="name"></h1>
+
+
+    <script>
+
+    
+        let namen = ['Thomas', 'Ryan', 'Jappie', 'Joey', 'Robin', 'Merlijn','Sven','Nigel', 'Paris', 'Yorrick'];
+        console.log(namen)
+
+        function genereerNaam() {
+            let randomNumber = Math.floor( Math.random() * namen.length);
+            let randomNaam = namen[randomNumber];
+
+            document.getElementById('name').innerText = randomNaam;
+        }
+    </script>
+</body>
+</html>
